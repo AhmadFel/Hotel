@@ -7,9 +7,9 @@
     <div>
         <label for="customer_id">Customer Name</label>
         <select name="customer_id" >
-            @foreach ($booking as $bookin)
-            <option value="{{ $bookin->id }}">
-            {{ $bookin->id }}
+            @foreach ($bookings as $booking)
+            <option value="{{ $booking->id }}">
+            {{ $booking->id }}
             </option>
             @endforeach
         </select>

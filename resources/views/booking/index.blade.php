@@ -1,40 +1,37 @@
-<a href="/booking/create">New Task</a>
+<a href="/booking/create">New Booking</a>
 <table>
     <tr>
         <th>
             ID
         </th>
         <th>
-            Customer Name
+            From
         </th>
 
         <th>
-            From
+            To
         </th>
         <th>
-            Too
+            Action
         </th>
 
     </tr>
-    @foreach($booking as $bookin)
+    @foreach($bookings as $booking)
 
     <tr>
         <td>
-            {{$bookin->id}}
+            {{$booking->id}}
         </td>
         <td>
-            {{ $bookin->customer->name }}
+            {{ $booking->from_date }}
         </td>
         <td>
-            {{ $bookin->from_date }}
+            {{ $booking->to_date }}
         </td>
         <td>
-            {{ $bookin->to_date }}
-        </td>
-        <td>
-            <a href="/booking/{{ $bookin->id }}">Show</a>
-            <a href="/booking/{{ $bookin->id }}/edit">Edit</a>
-            <form method="POST"action="booking/{{ $bookin->id }}">
+            <a href="/booking/{{ $booking->id }}">Show</a>
+            <a href="/booking/{{ $booking->id }}/edit">Edit</a>
+            <form method="POST"action="booking/{{ $booking->id }}">
             @csrf
             @method('DELETE')
             <button type="submit">Delete</button>

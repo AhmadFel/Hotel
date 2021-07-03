@@ -16,7 +16,7 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->enum('type', ['R', 'W'])->default('R');
-            $table->string('price');
+            $table->double('price');
             $table->timestamps();
         });
     }
