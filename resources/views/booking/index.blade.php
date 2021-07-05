@@ -2,7 +2,13 @@
 <table>
     <tr>
         <th>
-            ID
+            Booking ID
+        </th>
+        <th>
+            Customer Name
+        </th>
+        <th>
+            Room Type
         </th>
         <th>
             From
@@ -21,6 +27,12 @@
     <tr>
         <td>
             {{$booking->id}}
+        </td>
+        <td>
+            {{ @$booking->customer->name }}
+        </td>
+        <td>
+            {{ @$booking->room->type }}
         </td>
         <td>
             {{ $booking->from_date }}

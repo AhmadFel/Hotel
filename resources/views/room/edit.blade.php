@@ -2,8 +2,12 @@
     @csrf 
     @method('PUT')
     <div>
-        <label for="type">Room Type : </label>
-        <input type="text" value ="{{ $room->type }}"name="type">
+        <label for="type">Choose Room Type:</label>
+
+    <select name="type" id="type">
+            <option value="R">R</option>
+            <option value="W">W</option>
+    </select>
     </div>
     <div>
         <label for="price">Room price : </label>

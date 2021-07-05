@@ -66,7 +66,7 @@ class BookingController extends Controller
         $booking = Booking::find($id);
         $rooms = Room::select(['id','type'])->get();
         $customers = Customer::select(['id','name'])->get();
-        return view('booking.edit',compact('booking','rooms'.'customers'));
+        return view('booking.edit',compact('booking','rooms','customers'));
     }
 
     /**

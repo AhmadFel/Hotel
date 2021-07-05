@@ -2,7 +2,7 @@
 <table>
     <tr>
         <th>
-            ID
+            Room ID
         </th>
         <th>
             Type
